@@ -1,0 +1,21 @@
+{
+  "name": "wows-community-monitor",
+  "version": "0.1.0",
+  "description": "Displays statistics next to usernames in World of Warships Community.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "padtrack",
+  "license": "MIT",
+  "devDependencies": {
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "bottleneck": "^2.19.5",
+    "debug": "^4.3.4",
+    "lru-cache": "^10.0.1"
+  }
+}
