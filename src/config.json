@@ -3,5 +3,6 @@
     "author": "Trackpad",
     "description": "Displays statistics next to usernames in World of Warships Community.",
     "authorId": 212466672450142208,
-    "donate": "https://ko-fi.com/trackpad"
+    "donate": "https://ko-fi.com/trackpad",
+    "source": "https://github.com/padtrack/wows-community-monitor"
 }
