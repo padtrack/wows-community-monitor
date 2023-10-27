@@ -6,7 +6,13 @@ A BetterDiscord plugin that displays statistics next to usernames in World of Wa
 
 ### Installation
 
-Copy `dist/WoWSCommunityMonitor.plugin.js` to your plugins folder, and enable it from settings.
+1. Install [BetterDiscord](https://betterdiscord.app/)
+2. Download the compiled plugin by clicking "download raw file" on [dist/WoWSCommunityMonitor.plugin.js](https://github.com/padtrack/wows-community-monitor/blob/main/dist/WoWSCommunityMonitor.plugin.js)
+3. Move the compiled plugin to your plugins folder, which can be found in `Settings > BetterDiscord > Plugins > Open Plugins Folder`.
+
+You should end up with a file structure similar to the image below.
+
+![Installation Image](images/installation.png)
 
 ### Configuration
 
