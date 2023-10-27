@@ -137,7 +137,7 @@ export default class WoWSCommunityMonitor {
         );
         
         BdApi.Patcher.after(
-            "WoWSCommunityMonitor", MessageAuthors, "Z", (context, args, returned) => {
+            "WoWSCommunityMonitor", MessageAuthors, "default", (context, args, returned) => {
                 if (args[0].channel.guild_id !== GUILD_ID) return;
 
                 let user = this.cache.get(args[0].author.nick);
