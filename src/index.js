@@ -2,7 +2,17 @@ const { LRUCache } = require('lru-cache');
 const https = require("https");
 import Bottleneck from "bottleneck";
 
-const GUILD_ID = "669128285527080961";
+const GUILD_IDS = [
+    "669128285527080961",   // Default
+    "961967923319169034",   // French
+    "1007663744500891720",  // RU & EU
+    "1077592694492233781",  // Czech
+    "1081202781920165968",  // Polish
+    "1081233602613878836",  // German
+    "1093160288729169993",  // Ukrainian
+    "1171464808080609301",  // LATAM
+    "1171473905052033075",  // Brazilian
+];
 const USERNAME_PATTERN = /([a-zA-Z0-9_]+) \[(EU|NA|ASIA)\]$/;
 const EXTENSION_MAP = {
     "EU": "eu",
@@ -138,7 +148,7 @@ export default class WoWSCommunityMonitor {
         
         BdApi.Patcher.after(
             "WoWSCommunityMonitor", MessageAuthors, "default", (context, args, returned) => {
-                if (args[0].channel.guild_id !== GUILD_ID) return;
+                if (!GUILD_IDS.includes(args[0].channel.guild_id)) return;
 
                 let user = this.cache.get(args[0].author.nick);
 
