@@ -142,12 +142,13 @@ export default class WoWSCommunityMonitor {
     }
 
     start() {
+        console.log("%c[WoWSCommunityMonitor] %cStarted!", "color: red", "color: white");
         const MessageAuthors = BdApi.Webpack.getByStrings(
             "message", "author", "roleStyle", { defaultExport: false }
         );
         
         BdApi.Patcher.after(
-            "WoWSCommunityMonitor", MessageAuthors, "default", (context, args, returned) => {
+            "WoWSCommunityMonitor", MessageAuthors, "Z", (context, args, returned) => {
                 if (!GUILD_IDS.includes(args[0].channel.guild_id)) return;
 
                 let user = this.cache.get(args[0].author.nick);
